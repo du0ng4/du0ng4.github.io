@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andy Duong</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Side-Bar -->
+    <nav id="mySidenav" class="sidenav">
+        <button id="closebtn">&#10006;</button>
+        <a href="#about_me" class="nav_link">About Me</a>
+        <a href="#projects" class="nav_link">Projects and Coursework</a>
+        <a href="#contact" class="nav_link">Contact</a>
+    </nav>
+
+    <input type="image" src="assets/open_nav.png" id="open_nav" width=35
+        style="margin: 10px; position: fixed; z-index: 1;" alt="button to open navigation bar" />
+
+
+    <!-- Top Introduction -->
+    <section id="about_me">
+        <h2>Welcome to Andy Duong's Personal Website</h2>
+        <img src="assets/my_pic.png" alt="picture of Andy Duong">
+        <p id="intro">I am a recent graduate of CSU Fullerton with a Bachelor of Science in computer science and a minor
+            in mathematics. I'm interested in software engineering and data science. I enjoy working on projects in
+            Python or C++ that let us learn new things and help to connect people together.
+            <br> I am currently open to new opportunities.
+        </p>
+    </section>
+
+    <!-- Projects and Coursework -->
+    <section id="projects">
+        <h2 style="text-align: center;">Projects and Coursework</h2>
+
+        <article>
+            <h3>Plex Rich Presence</h3>
+            <img src="assets/plex-rich-presence.png" alt="status message on Discord when streaming from Plex" /><br>
+            <p>
+                Plex Rich Presence is a program that allows users to share their streaming activity from Plex to
+                Discord. It shares what the user is currently watching along with their progress.
+                <br><br>
+                This project is written in Python using pypresence to set the user's activity on Discord while using
+                Flask to listen for webhooks from Plex Media Server.
+                <br><br>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/du0ng4/Plex-Rich-Presence">Plex
+                    Rich Presence GitHub Repo</a>
+            </p>
+
+        </article>
+
+        <article>
+            <h3>Roulette Simulator</h3>
+            <img src="assets/roulette-simulator.png" alt="Roulette Simulator example output" /><br>
+            <p>
+                Roulette is a classic game of chance found in casinos and other gambling venues all across the world.
+                Given its multitude of variables in regards to player input, along with potential for high stakes, it is
+                no wonder there has been much study on the game by statisticians and the like.
+                <br><br>
+                This program uses MATLAB to simulate a game of roulette, either by playing with the same bet one
+                thousand times and seeing the profit or until a player goes bankrupt.
+                <br><br>
+                It asks for player input on how they would want to play, ask what types of bets they wish to place,
+                and the output will give the win percentage, how much “profit” was potentially made, how many rounds
+                they lasted, and gives a graph as a visual for the win-loss ratio.
+                <br><br>
+                <a target="_blank" rel="noopener noreferrer"
+                    href="https://github.com/du0ng4/Plex-Rich-Presence">Roulette Simulator GitHub Repo</a>
+            </p>
+        </article>
+
+
+        <article>
+            <h3>Covid-19 Death Rate Analysis</h3>
+            <img src="assets/covid.png" alt="summary of wrangled data set" /><br>
+            <p>
+                One of the questions during the Covid-19 pandemic was why different countries have such different
+                proportions of deaths relative to the number of disease cases. 
+                <br><br>
+                There were several hypotheses about this, including differences in medical facilities (countries with more hospitals should see fewer deaths), age
+                demographics (countries with a larger proportion of older people will see more deaths), and existing
+                mortality rates between countries (indicating pre-existing differences in overall health between
+                countries).
+                <br><br>
+                The goal of this project was to use linear modeling to quantify some of the variation in mortality from
+                Covid-19 in different counties due to differences in hospital infrastructure and demographics.
+                <br>
+                It uses R to wrangle data taken from multiple sources and builds linear models to determine what independent variables cause the most variance.
+                <br><br>
+                <a target="_blank"
+                    href="https://github.com/du0ng4/Covid-19-Death-Analysis">Analysis GitHub Repo</a>
+            </p><br>
+        </article>
+
+        <article>
+            <h3>Parallel and High Performance Computing Projects</h3>
+            <img src="assets/leader_election.png"" alt=" diagram of the leader election algorithm" /><br>
+            <p>
+                These projects include functions that are commonly used in parallel and distributed computing.
+                <br><br>
+                The leader election algorithm will elect a single node and give it special powers within the distributed
+                system.
+                This allows the selected node to coordinate the nodes in the distributed system, assign work, and
+                complete operations that don't require the other nodes by itself.
+                This can be useful for improving efficiency, reducing needed coordination, and simplifying tasks.
+                <br><br>
+                Clustering algorithms are among the most commonly used in unsupervised learning. The k-means algorithm
+                in particular is especially popular because it is rather easy to apply towards even large data sets.
+                It aims to partition n observations into k clusters where each observation will belong to the cluster
+                with the nearest mean.
+                <br><br>
+                These projects are written in C++ and uses MPI for message passing.
+            </p>
+        </article>
+    </section>
+
+    <!-- Contact Info -->
+    <section id="contact">
+        <h2 style="text-align: center;">Contact</h2>
+        <!-- https://www.flaticon.com/authors/pixel-perfect -->
+        <a href="https://github.com/du0ng4" target="_blank"><img src="assets/github.svg" class="contact_img"
+                alt="github logo" /></a>
+        <!-- https://www.flaticon.com/authors/google -->
+        <a href="https://www.linkedin.com/in/andy-duong-cs/" target="_blank"><img src="assets/linkedin-logo.svg"
+                class="contact_img" alt="linkedin logo" /></a>
+        <!-- https://www.flaticon.com/authors/freepik -->
+        <a href="mailto:aduong.cs@gmail.com" target="_blank"><img src="assets/email.svg" class="contact_img"
+                alt="mail icon" /></a>
+    </section>
+
+    <p id="credit">Created by Andy Duong</p>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.display = "block";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.display = "none";
+        }
+
+        let open = document.getElementById("open_nav");
+        let close = document.getElementById("closebtn");
+
+
+        open.addEventListener("click", openNav);
+        close.addEventListener("click", closeNav);
+
+        // closes navigation bar after tapping a link if on mobile
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            let link_clicked = document.getElementsByClassName("nav_link");
+            for (var i = 0; i < link_clicked.length; i++) {
+                link_clicked[i].addEventListener("click", closeNav);
+            }
+        }
+
+    </script>
+</body>
+
+
+</html>
